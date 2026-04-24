@@ -11,6 +11,22 @@
     p, li { font-size: 15px; color: #444; }
     a { color: #69BE94; }
     .updated { font-size: 13px; color: #999; margin-bottom: 32px; }
+
+    /* Legal basis rows */
+    .basis-list { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-direction: column; gap: 10px; }
+    .basis-item { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 10px 14px; background: #f9f9f9; border-radius: 10px; }
+    .basis-label { font-size: 14px; color: #333; flex: 1; }
+    .basis-tag { font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
+    .tag-contract { background: #e6f4ef; color: #2a7a5a; }
+    .tag-consent  { background: #eef3ff; color: #3a5fcf; }
+    .tag-interest { background: #f3f3f3; color: #666; }
+
+    /* Third party cards */
+    .partner-list { display: flex; flex-direction: column; gap: 14px; margin-top: 12px; }
+    .partner-card { border-left: 3px solid #69BE94; padding: 12px 16px; background: #f9f9f9; border-radius: 0 10px 10px 0; }
+    .partner-name { font-size: 15px; font-weight: 700; color: #111; margin-bottom: 2px; }
+    .partner-desc { font-size: 14px; color: #555; margin: 0; line-height: 1.5; }
+    .partner-link { font-size: 13px; color: #69BE94; }
   </style>
 </head>
 <body>
@@ -18,36 +34,102 @@
   <img src="https://wyrgmmdcyhautiwagnvv.supabase.co/storage/v1/object/public/assets/LOGO%20final%20png%20cropped.png" alt="BARK" style="height:50px;margin-bottom:8px;" />
   <p class="updated">Politika privatnosti · Poslednje ažuriranje: april 2026.</p>
 
-  <p>BARK je aplikacija za povezivanje vlasnika pasa sa šetačima u Beogradu. Ova politika privatnosti objašnjava koje podatke prikupljamo, kako ih koristimo i kako ih štitimo.</p>
+  <p>BARK je mobilna aplikacija koja povezuje vlasnike pasa sa šetačima u Beogradu. Ova politika privatnosti objašnjava koje podatke prikupljamo, kako ih koristimo, kako ih štitimo i koja su vaša prava.</p>
 
-  <h2>Podaci koje prikupljamo</h2>
+  <h2>1. Podaci koje prikupljamo</h2>
+  <p>Prilikom korišćenja aplikacije možemo prikupljati sledeće podatke:</p>
   <ul>
     <li>Ime i prezime</li>
     <li>Email adresa</li>
-    <li>Fotografija profila (opciono)</li>
-    <li>Deo grada (za šetače)</li>
-    <li>Informacije o psima (za vlasnike)</li>
+    <li>Fotografija profila i naslovna fotografija (opciono)</li>
+    <li>Deo grada i grad (za šetače)</li>
+    <li>Biografija i cena usluge (za šetače)</li>
+    <li>Informacije o psima — ime, rasa, veličina, napomene (za vlasnike)</li>
+    <li>Sadržaj poruka između korisnika</li>
+    <li>Recenzije i ocene šetača</li>
+    <li>Token za push obaveštenja (ukoliko odobrite)</li>
+    <li>Podaci o rezervacijama šetnji</li>
   </ul>
 
-  <h2>Kako koristimo podatke</h2>
+  <h2>2. Kako koristimo podatke</h2>
   <ul>
     <li>Prikazivanje profila šetača vlasnicima pasa</li>
-    <li>Omogućavanje komunikacije između korisnika</li>
-    <li>Upravljanje rezervacijama šetnji</li>
-    <li>Slanje obaveštenja vezanih za nalog (npr. resetovanje lozinke)</li>
+    <li>Omogućavanje komunikacije između korisnika putem poruka</li>
+    <li>Upravljanje zahtevima i rezervacijama šetnji</li>
+    <li>Slanje push obaveštenja u vezi sa rezervacijama i recenzijama</li>
+    <li>Resetovanje lozinke i potvrda promene email adrese</li>
+    <li>Odgovaranje na zahteve za podršku</li>
   </ul>
 
-  <h2>Deljenje podataka</h2>
-  <p>Ne prodajemo niti delimo vaše lične podatke sa trećim stranama, osim u slučajevima koji su neophodni za funkcionisanje aplikacije (npr. infrastruktura za autentifikaciju i skladištenje podataka).</p>
+  <h2>3. Pravni osnov za obradu podataka</h2>
+  <p>U skladu sa važećim propisima o zaštiti podataka o ličnosti (GDPR i Zakon o zaštiti podataka o ličnosti), svaka obrada podataka zasnovana je na jednom od sledećih pravnih osnova:</p>
+  <ul class="basis-list">
+    <li class="basis-item">
+      <span class="basis-label">Podaci o nalogu (ime, email) — neophodni za registraciju i pristup aplikaciji</span>
+      <span class="basis-tag tag-contract">Izvršenje ugovora</span>
+    </li>
+    <li class="basis-item">
+      <span class="basis-label">Podaci o rezervacijama šetnji — neophodni za realizaciju dogovorene usluge</span>
+      <span class="basis-tag tag-contract">Izvršenje ugovora</span>
+    </li>
+    <li class="basis-item">
+      <span class="basis-label">Lokacija (deo grada) — neophodna za prikazivanje relevantnih šetača</span>
+      <span class="basis-tag tag-contract">Izvršenje ugovora</span>
+    </li>
+    <li class="basis-item">
+      <span class="basis-label">Poruke između korisnika — neophodne za komunikaciju u okviru usluge</span>
+      <span class="basis-tag tag-contract">Izvršenje ugovora</span>
+    </li>
+    <li class="basis-item">
+      <span class="basis-label">Push obaveštenja — šaljemo ih samo uz vašu dozvolu</span>
+      <span class="basis-tag tag-consent">Saglasnost</span>
+    </li>
+    <li class="basis-item">
+      <span class="basis-label">Anonimizovani statistički podaci o korišćenju — u svrhu poboljšanja aplikacije</span>
+      <span class="basis-tag tag-interest">Legitimni interes</span>
+    </li>
+  </ul>
 
-  <h2>Čuvanje podataka</h2>
-  <p>Vaši podaci se čuvaju na sigurnim serverima putem platforme Supabase. Možete zatražiti brisanje svog naloga i svih povezanih podataka slanjem emaila na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a>.</p>
+  <h2>4. Treće strane kojima delimo podatke</h2>
+  <p>Ne prodajemo vaše lične podatke trećim stranama. Podaci se dele isključivo u meri neophodnoj za funkcionisanje aplikacije, sa sledećim pouzdanim pružaocima usluga:</p>
+  <div class="partner-list">
+    <div class="partner-card">
+      <div class="partner-name">Supabase</div>
+      <p class="partner-desc">Infrastruktura baze podataka i autentifikacije. Svi korisnički podaci, rezervacije i poruke čuvaju se na Supabase serverima uz enkripciju i kontrolu pristupa.</p>
+      <a class="partner-link" href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a>
+    </div>
+    <div class="partner-card">
+      <div class="partner-name">Expo (Expo Push Notifications)</div>
+      <p class="partner-desc">Infrastruktura za isporuku push obaveštenja. Expo obrađuje token vašeg uređaja isključivo u svrhu dostavljanja obaveštenja u vezi sa rezervacijama.</p>
+      <a class="partner-link" href="https://expo.dev/privacy" target="_blank">expo.dev/privacy</a>
+    </div>
+    <div class="partner-card">
+      <div class="partner-name">Apple / Google</div>
+      <p class="partner-desc">Distribucija aplikacije putem App Store i Google Play platformi. Push obaveštenja se isporučuju krajnjem uređaju posredstvom infrastrukture ovih kompanija.</p>
+      <a class="partner-link" href="https://www.apple.com/legal/privacy/" target="_blank">apple.com/legal/privacy</a>
+    </div>
+  </div>
 
-  <h2>Prijava zloupotrebe</h2>
-<p>Korisnici mogu prijaviti neprikladan sadržaj ili ponašanje slanjem emaila na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a>. BARK zadržava pravo da ukloni sadržaj ili nalog koji krši uslove korišćenja.</p>
-  
-  <h2>Kontakt</h2>
-  <p>Za sva pitanja u vezi sa privatnošću, pišite nam na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a>.</p>
+  <h2>5. Korisnički sadržaj</h2>
+  <p>Korisnici mogu postavljati fotografije, pisati opise, poruke i recenzije. Ovaj sadržaj je vidljiv drugim korisnicima aplikacije. Korisnici su odgovorni za sadržaj koji postavljaju. BARK zadržava pravo da ukloni sadržaj koji krši uslove korišćenja.</p>
+
+  <h2>6. Brisanje naloga i podataka</h2>
+  <p>Korisnici mogu obrisati svoj nalog direktno u aplikaciji, u okviru sekcije Uredi profil. Brisanjem naloga trajno se uklanjaju svi lični podaci, rezervacije i poruke. Alternativno, brisanje možete zatražiti slanjem emaila na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a>.</p>
+
+  <h2>7. Čuvanje podataka</h2>
+  <p>Podaci se čuvaju na sigurnim serverima putem platforme Supabase sve dok nalog postoji. Nakon brisanja naloga, podaci se trajno uklanjaju. Anonimizovani statistički podaci mogu se zadržati u svrhu poboljšanja usluge.</p>
+
+  <h2>8. Zaštita dece</h2>
+  <p>BARK nije namenjen osobama mlađim od 13 godina. Ne prikupljamo namerno podatke o deci. Ukoliko saznamo da je dete mlađe od 13 godina kreiralo nalog, odmah ćemo ga ukloniti.</p>
+
+  <h2>9. Prijava zloupotrebe</h2>
+  <p>Neprikladan sadržaj ili ponašanje možete prijaviti putem opcije „Prijavi zloupotrebu" u sekciji Podrška unutar aplikacije, ili direktno slanjem emaila na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a>. Svaku prijavu razmatramo i preduzimamo odgovarajuće mere.</p>
+
+  <h2>10. Izmene politike</h2>
+  <p>Zadržavamo pravo da izmenimo ovu politiku privatnosti. O bitnim izmenama obavestićemo korisnike putem emaila ili obaveštenja u aplikaciji.</p>
+
+  <h2>11. Kontakt</h2>
+  <p>Za sva pitanja u vezi sa privatnošću pišite nam na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a>.</p>
 
 </body>
 </html>
