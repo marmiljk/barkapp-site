@@ -49,6 +49,7 @@
     <li>Recenzije i ocene šetača</li>
     <li>Token za push obaveštenja (ukoliko odobrite)</li>
     <li>Podaci o rezervacijama šetnji</li>
+    <li>Fotografija lica (selfi) i fotografija lične karte ili pasoša — samo ako se šetač opciono odluči za verifikaciju profila (videti tačku 6)</li>
   </ul>
 
   <h2>2. Kako koristimo podatke</h2>
@@ -59,6 +60,7 @@
     <li>Slanje push obaveštenja u vezi sa rezervacijama i recenzijama</li>
     <li>Resetovanje lozinke i potvrda promene email adrese</li>
     <li>Odgovaranje na zahteve za podršku</li>
+    <li>Ručna verifikacija identiteta šetača (samo ako se šetač odluči za to)</li>
   </ul>
 
   <h2>3. Pravni osnov za obradu podataka</h2>
@@ -82,6 +84,10 @@
     </li>
     <li class="basis-item">
       <span class="basis-label">Push obaveštenja — šaljemo ih samo uz vašu dozvolu</span>
+      <span class="basis-tag tag-consent">Saglasnost</span>
+    </li>
+    <li class="basis-item">
+      <span class="basis-label">Verifikacione fotografije (selfi i dokument) — obrađujemo ih samo ako se šetač opciono odluči za verifikaciju</span>
       <span class="basis-tag tag-consent">Saglasnost</span>
     </li>
     <li class="basis-item">
@@ -118,23 +124,38 @@
   <h2>5. Korisnički sadržaj</h2>
   <p>Korisnici mogu postavljati fotografije, pisati opise, poruke i recenzije. Ovaj sadržaj je vidljiv drugim korisnicima aplikacije. Korisnici su odgovorni za sadržaj koji postavljaju. BARK zadržava pravo da ukloni sadržaj koji krši uslove korišćenja.</p>
 
-  <h2>6. Brisanje naloga i podataka</h2>
-  <p>Korisnici mogu obrisati svoj nalog direktno u aplikaciji, u okviru sekcije Uredi profil. Brisanjem naloga trajno se uklanjaju svi lični podaci, rezervacije i poruke.</p>
+  <h2>6. Verifikacija profila šetača (opciono)</h2>
+  <p>Šetači mogu opciono da verifikuju svoj profil i dobiju značku "Verifikovan profil" koju vlasnici vide u pretrazi. Verifikacija nije obavezna — aplikacija je u potpunosti upotrebljiva i bez nje.</p>
+
+  <p><strong>Šta prikupljamo:</strong> dve fotografije — sliku tvog lica (selfi) i sliku lične karte ili pasoša. Pre fotografisanja molimo te da prekriješ JMBG (lična karta) ili broj pasoša prstom — taj podatak nam nije potreban za verifikaciju.</p>
+
+  <p><strong>Zašto:</strong> da bismo ručno uporedili fotografiju tvog lica sa fotografijom na dokumentu i izdali značku verifikacije. Slike se ne koriste ni za jednu drugu svrhu.</p>
+
+  <p><strong>Pravna osnova:</strong> tvoj pristanak (član 12. Zakona o zaštiti podataka o ličnosti) i naš legitimni interes da povećamo bezbednost i poverenje na platformi.</p>
+
+  <p><strong>Kako čuvamo:</strong> slike se čuvaju u privatnom, šifrovanom storage prostoru (AES-256). Pristup imaju samo administrator BARK-a. Slike se ne dele sa trećim licima ni sa drugim korisnicima aplikacije, niti se prosleđuju automatskim servisima za prepoznavanje lica ili biometrijsku obradu.</p>
+
+  <p><strong>Period čuvanja:</strong> slike se čuvaju dok je tvoj nalog aktivan. Kada obrišeš nalog, slike se trajno brišu zajedno sa nalogom (videti tačku 7).</p>
+
+  <p><strong>Tvoja prava:</strong> možeš zatražiti pregled ili brisanje svojih verifikacionih slika u svakom trenutku slanjem email-a na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a>. Možeš se predomisliti i posle slanja na verifikaciju.</p>
+
+  <h2>7. Brisanje naloga i podataka</h2>
+  <p>Korisnici mogu obrisati svoj nalog direktno u aplikaciji, u okviru sekcije Uredi profil. Brisanjem naloga trajno se uklanjaju svi lični podaci, rezervacije i poruke (uključujući i verifikacione fotografije, ako postoje).</p>
   <p>Ukoliko nemate pristup aplikaciji, brisanje možete zatražiti i preko stranice <a href="https://barkapp.rs/delete-account.html">barkapp.rs/delete-account.html</a> ili slanjem emaila na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a>.</p>
 
-  <h2>7. Čuvanje podataka</h2>
+  <h2>8. Čuvanje podataka</h2>
   <p>Podaci se čuvaju na sigurnim serverima putem platforme Supabase sve dok nalog postoji. Nakon brisanja naloga, podaci se trajno uklanjaju. Anonimizovani statistički podaci mogu se zadržati u svrhu poboljšanja usluge.</p>
 
-  <h2>8. Zaštita maloletnika</h2>
+  <h2>9. Zaštita maloletnika</h2>
   <p>BARK je namenjen isključivo punoletnim osobama, starijim od 18 godina. Aplikaciju ne smeju koristiti maloletnici. Ne prikupljamo namerno podatke o maloletnicima. Ukoliko saznamo da je maloletnik kreirao nalog, odmah ćemo ga ukloniti i obrisati sve povezane podatke. Slučajeve možete prijaviti na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a>.</p>
 
-  <h2>9. Prijava zloupotrebe</h2>
+  <h2>10. Prijava zloupotrebe</h2>
   <p>Neprikladan sadržaj ili ponašanje možete prijaviti putem opcije „Prijavi zloupotrebu" u sekciji Podrška unutar aplikacije, ili direktno slanjem emaila na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a>. Svaku prijavu razmatramo i preduzimamo odgovarajuće mere.</p>
 
-  <h2>10. Izmene politike</h2>
+  <h2>11. Izmene politike</h2>
   <p>Zadržavamo pravo da izmenimo ovu politiku privatnosti. O bitnim izmenama obavestićemo korisnike putem emaila ili obaveštenja u aplikaciji.</p>
 
-  <h2>11. Kontakt</h2>
+  <h2>12. Kontakt</h2>
   <p>Za sva pitanja u vezi sa privatnošću pišite nam na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a>.</p>
 
 </body>
