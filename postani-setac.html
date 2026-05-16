@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Postani BARK šetač - Šetnja pasa u Beogradu</title>
+  <meta name="description" content="Postani BARK šetač i zaradi šetajući pse u Beogradu. Radi kada hoćeš, BARK ne uzima proviziju." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #69BE94;
+      min-height: 100vh;
+      padding: 40px 16px;
+      color: #222;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 36px 32px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+    }
+    .hero { text-align: center; padding: 48px 32px; }
+    .logo { height: 60px; margin-bottom: 24px; }
+    .hero h1 { font-size: 28px; margin-bottom: 12px; color: #222; }
+    .hero .lead {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+    .cta-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .app-badge {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 24px;
+      border-radius: 999px;
+      transition: background 0.2s;
+    }
+    .app-badge.active { background: #111; color: #fff; }
+    .app-badge.active:hover { background: #333; }
+    .app-badge.coming-soon { background: #f0f0f0; color: #888; }
+    .secondary {
+      font-size: 14px;
+      color: #888;
+    }
+    .secondary a { color: #69BE94; text-decoration: none; font-weight: 600; }
+    .secondary a:hover { text-decoration: underline; }
+    .image-card {
+      padding: 0;
+      overflow: hidden;
+    }
+    .walker-image {
+      width: calc(100% + 4px);
+      height: auto;
+      display: block;
+      margin-left: -2px;
+      border-radius: 24px;
+    }
+    h2 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      color: #222;
+    }
+    h3 {
+      font-size: 16px;
+      margin-top: 18px;
+      margin-bottom: 6px;
+      color: #222;
+    }
+    p { margin-bottom: 12px; color: #444; font-size: 15px; }
+    ol, ul { padding-left: 0; list-style: none; }
+    ol li, ul li {
+      margin-bottom: 14px;
+      color: #444;
+      font-size: 15px;
+    }
+    ul.with-bullets li::before {
+      content: '';
+    }
+    .steps li strong { display: block; margin-bottom: 4px; color: #222; }
+    .pill-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .pill-list li svg {
+      width: 22px;
+      height: 22px;
+      color: #2E7A6B;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #69BE94;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      vertical-align: middle;
+      margin-left: 4px;
+    }
+    .faq-item {
+      padding: 0;
+      border-bottom: 1px solid #eee;
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item summary {
+      cursor: pointer;
+      list-style: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: #222;
+      padding: 16px 32px 16px 0;
+      position: relative;
+      user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '▾';
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #69BE94;
+      font-size: 16px;
+      transition: transform 0.2s ease;
+    }
+    .faq-item[open] summary::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+    .faq-item > p {
+      padding: 0 0 16px 0;
+      margin-bottom: 0;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px 0 0 0;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: #ffffff;
+      opacity: 0.7;
+      text-decoration: none;
+    }
+    .footer-links a:hover { opacity: 1; }
+    @media (max-width: 480px) {
+      .card { padding: 28px 22px; }
+      .hero { padding: 36px 22px; }
+      .hero h1 { font-size: 24px; }
+      .hero .lead { font-size: 16px; }
+      h2 { font-size: 20px; }
+    }
+  </style>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '718262304711957');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=718262304711957&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+  <main class="container">
+
+    <section class="card hero">
+      <img src="https://wyrgmmdcyhautiwagnvv.supabase.co/storage/v1/object/public/assets/LOGO%20final%20png%20cropped.png" alt="BARK" class="logo" />
+      <h1>Postani BARK šetač</h1>
+      <p class="lead">Zaradi šetajući pse u Beogradu - radi kada hoćeš, koliko hoćeš.</p>
+      <div class="cta-row">
+        <a href="https://apps.apple.com/app/id6762494609" class="app-badge active" onclick="fbq('track', 'AppStoreClick')">Preuzmi sa App Store</a>
+        <span class="app-badge coming-soon">Uskoro na Google Play</span>
+      </div>
+      <p class="secondary">Već imaš aplikaciju? <a href="bark://">Otvori aplikaciju</a></p>
+    </section>
+
+    <section class="card image-card">
+      <img src="walker-photo.jpg" alt="BARK šetač sa psom u Beogradu" class="walker-image" />
+    </section>
+
+    <section class="card">
+      <h2>Kako funkcioniše</h2>
+      <ol class="steps">
+        <li>
+          <strong>1. Preuzmi BARK i registruj se kao šetač.</strong>
+          Napraviš profil za nekoliko minuta - ime, slika, deo grada u kome šetaš, vremenski slotovi kada si dostupan/na.
+        </li>
+        <li>
+          <strong>2. Vlasnici pasa te pronalaze u pretrazi.</strong>
+          Kad neko traži šetača u tvom kraju, tvoj profil se pojavljuje u rezultatima.
+        </li>
+        <li>
+          <strong>3. Dobijaš zahtev za šetnju u aplikaciji.</strong>
+          Možeš prihvatiti ili odbiti. Ako prihvatiš, dobijaš detalje (vreme, lokacija, podaci o psu).
+        </li>
+        <li>
+          <strong>4. Šetnja se završava - dobijaš ocenu.</strong>
+          Što bolje ocene imaš, više vlasnika će te birati.
+        </li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Šta ti treba da bi počeo/la</h2>
+      <ul class="pill-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          <span>iPhone ili Android</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></svg>
+          <span>Iskustvo i ljubav prema psima</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Slobodno vreme tokom dana, vikenda ili večeri</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+          <span>Profil sa slikom (možeš dodati i fotografije iz prethodnih šetnji)</span>
+        </li>
+      </ul>
+      <p style="margin-top: 16px;"><strong>Iskustvo nije obavezno</strong> - ali pomaže. Mnogi naši šetači su vlasnici pasa koji žele da zarade malo dodatnog novca.</p>
+    </section>
+
+    <section class="card">
+      <h2>Verifikovan profil - opciono, ali se isplati</h2>
+      <p>Možeš da verifikuješ svoj profil tako što ćeš nam poslati selfi i sliku lične karte ili pasoša. Pre fotografisanja <strong>molimo te da prstom prekriješ JMBG ili broj pasoša</strong> - taj podatak nam ne treba.</p>
+      <p><strong>Šta dobiješ:</strong> zelenu značku <span class="verified-badge">✓ Verifikovan šetač</span> koju vlasnici vide u pretrazi. Verifikovani šetači u proseku dobijaju više rezervacija.</p>
+      <p><strong>Verifikacija je opciona</strong> - možeš da koristiš BARK i bez nje, ali vlasnici se osećaju sigurnije sa verifikovanim šetačima.</p>
+      <p>Više o tome kako čuvamo tvoje fotografije pročitaj u našoj <a href="/privacy.html" style="color: #69BE94; font-weight: 600; text-decoration: none;">politici privatnosti</a>.</p>
+    </section>
+
+    <section class="card">
+      <h2>Cena i naplata</h2>
+      <ul class="pill-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+          <span>Cenu šetnje <strong>ti određuješ</strong> u svom profilu.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span><strong>BARK ne uzima proviziju.</strong></span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Naplata se vrši <strong>direktno između tebe i vlasnika psa</strong> (gotovinom ili prenosom računa, dogovor je vaš).</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Često postavljana pitanja</h2>
+
+      <details class="faq-item">
+        <summary>Treba li mi iskustvo da bih bio/la BARK šetač?</summary>
+        <p>Ne mora. Većina naših šetača su ljudi koji vole pse i imaju slobodnog vremena. Ipak, ako imaš iskustvo (sopstveni pas, dosadašnje šetanje), to možeš da napomeneš u svom opisu - vlasnici to cene.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Šta ako pas pobegne ili se povredi?</summary>
+        <p>Preporučuje se da uvek koristiš povodac, da prijaviš incident na <a href="mailto:podrska@barkapp.rs" style="color: #69BE94; font-weight: 600; text-decoration: none;">podrska@barkapp.rs</a>, i da kontaktiraš vlasnika što pre.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Kada me plaćaju?</summary>
+        <p>Plaćanje se dogovara direktno sa vlasnikom psa - najčešće na kraju šetnje ili po dogovoru.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Mogu li da otkažem šetnju?</summary>
+        <p>Možeš, ali probaj da javiš vlasniku što ranije. Često otkazivanje smanjuje broj rezervacija koje dobijaš.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Da li mogu da budem šetač i u drugom gradu?</summary>
+        <p>Trenutno BARK radi samo u <strong>Beogradu</strong>. Planiramo proširenje na ostale gradove uskoro. Možeš da nam pišeš u kom gradu želiš da koristiš BARK na <a href="mailto:podrska@barkapp.rs" style="color: #69BE94; font-weight: 600; text-decoration: none;">podrska@barkapp.rs</a>.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Da li je BARK aplikacija besplatna za šetače?</summary>
+        <p>Da, potpuno besplatna za preuzimanje i korišćenje.</p>
+      </details>
+    </section>
+
+    <section class="card hero">
+      <div class="cta-row">
+        <a href="https://apps.apple.com/app/id6762494609" class="app-badge active" onclick="fbq('track', 'AppStoreClick')">Preuzmi sa App Store</a>
+        <span class="app-badge coming-soon">Uskoro na Google Play</span>
+      </div>
+      <p class="secondary">Imaš pitanje? Piši nam na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a></p>
+    </section>
+
+    <div class="footer-links">
+      <a href="/">Početna</a>
+      <a href="/privacy.html">Politika privatnosti</a>
+      <a href="/uslovi.html">Uslovi korišćenja</a>
+      <a href="/child-safety.html">Bezbednost dece</a>
+      <a href="/delete-account.html">Brisanje naloga</a>
+      <a href="/about.html">O aplikaciji</a>
+    </div>
+
+  </main>
+</body>
+</html>
