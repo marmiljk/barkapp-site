@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saveti za bezbednu šetnju - BARK</title>
+  <meta name="description" content="Vodič za BARK šetače: pravila i preporuke za sigurnu i profesionalnu šetnju u Beogradu." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #69BE94;
+      min-height: 100vh;
+      padding: 40px 16px;
+      color: #222;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 36px 32px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+    }
+    .hero { text-align: center; padding: 48px 32px; }
+    .logo { height: 60px; margin-bottom: 24px; }
+    .hero h1 { font-size: 28px; margin-bottom: 12px; color: #222; }
+    .hero .lead {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .hero .intro-note {
+      font-size: 15px;
+      color: #666;
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+    h2 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      color: #222;
+    }
+    .section-h2 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-h2 svg {
+      width: 26px;
+      height: 26px;
+      color: #2E7A6B;
+      flex-shrink: 0;
+    }
+    h3 {
+      font-size: 17px;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      color: #2E7A6B;
+    }
+    h3:first-of-type { margin-top: 4px; }
+    p { margin-bottom: 12px; color: #444; font-size: 15px; }
+    .rules-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .rules-list li {
+      padding-left: 18px;
+      position: relative;
+      margin-bottom: 10px;
+      color: #444;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .rules-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #2E7A6B;
+      font-weight: 700;
+    }
+    .rules-list li strong { color: #222; }
+    .secondary {
+      font-size: 15px;
+      color: #444;
+    }
+    .secondary a { color: #69BE94; text-decoration: none; font-weight: 600; }
+    .secondary a:hover { text-decoration: underline; }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px 0 0 0;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: #ffffff;
+      opacity: 0.7;
+      text-decoration: none;
+    }
+    .footer-links a:hover { opacity: 1; }
+    @media (max-width: 480px) {
+      .card { padding: 28px 22px; }
+      .hero { padding: 36px 22px; }
+      .hero h1 { font-size: 24px; }
+      .hero .lead { font-size: 16px; }
+      .hero .intro-note { font-size: 14px; }
+      h2 { font-size: 20px; }
+      h3 { font-size: 16px; }
+    }
+  </style>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '718262304711957');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=718262304711957&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+  <main class="container">
+
+    <section class="card hero">
+      <img src="https://wyrgmmdcyhautiwagnvv.supabase.co/storage/v1/object/public/assets/LOGO%20final%20png%20cropped.png" alt="BARK" class="logo" />
+      <h1>Saveti za bezbednu šetnju</h1>
+      <p class="lead">Vodič za BARK šetače - pravila i preporuke za sigurnu, bezbednu šetnju.</p>
+      <p class="intro-note">Bezbednost psa je tvoja odgovornost. Pridržavaj se ovih saveta pri svakoj šetnji - vlasnici biraju iskusne i odgovorne šetače.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-h2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>Pre šetnje - pitanja za vlasnika</h2>
+      <p>Prvi put kad uzmeš psa na šetnju, pitaj vlasnika:</p>
+      <ul class="rules-list">
+        <li>Da li je pas socijalizovan sa drugim psima, decom, biciklima, automobilima?</li>
+        <li>Da li reaguje agresivno na nešto (ljude, druge pse, glasne zvukove)?</li>
+        <li>Ima li zdravstvenih problema, alergija, lekova?</li>
+        <li>Kakvi su signali da je umoran ili uznemiren?</li>
+        <li>Sa kim sme da se druži (ostali psi, deca, ljudi)?</li>
+        <li>Koje su komande koje uvek posluša (npr. "stoj", "kod mene")?</li>
+        <li>Koliko dugo može da hoda? Posebno važno za starije ili male pse.</li>
+        <li>Ima li omiljenu poslasticu - i smem li da je koristim ako je potrebno?</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="section-h2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-1.39 13.42L7.4 13.21l1.41-1.41 1.79 1.79 5.18-5.18 1.41 1.42-6.58 6.59z"/></svg>Pre nego što izađeš iz stana</h2>
+      <ul class="rules-list">
+        <li>Proveri povodac i ogrlicu - da li je dobro stavljen, da li je kopča sigurna.</li>
+        <li>Ponesi kesice za izmet.</li>
+        <li>Po vrućini nosi flašicu vode i činijicu.</li>
+        <li>Pas ima identifikacionu pločicu sa imenom i telefonom vlasnika? Ako ne, fotografiši psa pre šetnje.</li>
+        <li>Ukoliko si već šetao/la istog psa ranije, pitaj vlasnika da li ima neka novost koju treba da znaš.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="section-h2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="4.5" cy="9.5" r="2.5"/><circle cx="9" cy="5.5" r="2.5"/><circle cx="15" cy="5.5" r="2.5"/><circle cx="19.5" cy="9.5" r="2.5"/><path d="M17.34 14.86c-.87-1.02-1.6-1.89-2.48-2.91-.46-.54-1.05-1.08-1.75-1.32-.11-.04-.22-.07-.33-.09-.25-.04-.52-.04-.78-.04s-.53 0-.79.05c-.11.02-.22.05-.33.09-.7.24-1.28.78-1.74 1.32-.87 1.02-1.6 1.89-2.48 2.91-1.31 1.31-2.92 2.76-2.62 4.79.29 1.02 1.02 2.03 2.33 2.32.73.15 3.06-.44 5.54-.44h.18c2.48 0 4.81.58 5.54.44 1.31-.29 2.04-1.31 2.33-2.32.31-2.04-1.3-3.49-2.62-4.8z"/></svg>Tokom šetnje - bezbednosna pravila</h2>
+      <ul class="rules-list">
+        <li><strong>Uvek koristi povodac</strong> - bez izuzetka.</li>
+        <li><strong>Prati ponašanje psa</strong> tokom šetnje - ne gubi fokus zbog telefona ili razgovora.</li>
+        <li><strong>Ne ostavljaj psa vezanog</strong> ispred prodavnice ili kafića - krađe pasa se dešavaju u Beogradu.</li>
+        <li><strong>Drugi psi:</strong> ne dozvoli direktan kontakt bez dogovora sa drugim vlasnikom.</li>
+        <li><strong>Hrana sa zemlje</strong> - ne dozvoljavaj psu da jede hranu sa zemlje.</li>
+        <li><strong>Pokupi izmet</strong> - uvek, svaki put. Pripremi kese unapred, ili pitaj vlasnika da ti da.</li>
+        <li><strong>Po vrućini</strong> - proveri rukom da li je asfalt prevruć (drži 5 sekundi - ako boli tebe, boli i psa). Izaberi delove zaštićene senkom ili travu. Obavesti vlasnika ako nisi u mogućnosti da nađeš odgovarajuće mesto za šetnju psa na velikoj vrućini.</li>
+        <li><strong>Pažnja i ponašanje</strong> - ako pas postaje nervozan ili agresivan, smiri tempo i izaberi mirniji put.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="section-h2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>Šta NE smeš da radiš</h2>
+      <ul class="rules-list">
+        <li>Ne deli psa sa drugima - samo ti šetaš, ne prijatelji ili partner.</li>
+        <li>Ne vodi ga na nepoznata mesta bez dogovora sa vlasnikom.</li>
+        <li>Ne dozvoli mu da pretura po smeću, otrovnim biljkama, barama.</li>
+        <li>Ne udaraj, ne viči - ako pas ne sluša, smiri se i kontaktiraj vlasnika.</li>
+        <li>Ne fotografiši psa za društvene mreže bez dozvole vlasnika.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="section-h2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>U slučaju problema - šta da uradiš</h2>
+      <ul class="rules-list">
+        <li><strong>Pas se izgubi:</strong> ostani na mestu, javi vlasniku ODMAH, vrati se na poslednju lokaciju gde ste bili.</li>
+        <li><strong>Pas se povredi:</strong> kontaktiraj vlasnika, ako je hitno idi kod najbližeg veterinara.</li>
+        <li><strong>Pas ujede nekoga:</strong> ostani miran, kontaktiraj vlasnika, ostani sa povređenim ako je teško povređen.</li>
+        <li><strong>Drugi pas napadne tvog:</strong> nemoj se umešati fizički - pokušaj da odvojiš povodcem i viči glasno.</li>
+        <li><strong>Bilo kakav incident:</strong> prijavi BARK-u na <a href="mailto:podrska@barkapp.rs" style="color: #69BE94; font-weight: 600; text-decoration: none;">podrska@barkapp.rs</a> istog dana.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="section-h2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>Po godišnjim dobima</h2>
+
+      <h3>Leto</h3>
+      <ul class="rules-list">
+        <li>Proveri rukom temperaturu asfalta pre šetnje.</li>
+        <li>Uvek nosi vodu sa sobom.</li>
+        <li>Češće pauze u senci.</li>
+      </ul>
+
+      <h3>Zima</h3>
+      <ul class="rules-list">
+        <li>Mali i kratkodlaki psi - obuci im jaknu.</li>
+        <li>Izbegavaj soljen led - oštećuje šape.</li>
+        <li>Po jakoj hladnoći - kraće šetnje.</li>
+      </ul>
+
+      <h3>Kiša</h3>
+      <ul class="rules-list">
+        <li>Kraće šetnje.</li>
+        <li>Peškirom obriši psa nakon šetnje pre ulaska u stan.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="section-h2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>Specijalni slučajevi</h2>
+      <ul class="rules-list">
+        <li><strong>Mali psi:</strong> kraći tempo, izbegavaj prometne ulice gde mogu da ih ne primete.</li>
+        <li><strong>Stariji psi:</strong> kraće šetnje, češće pauze, voda.</li>
+        <li><strong>Veliki psi:</strong> potreban veći prostor, izbegavaj mesta sa velikim gužvama.</li>
+        <li><strong>Adoptirani psi iz skloništa:</strong> dodatna pažnja na zvukove i ljude - mogu biti uplašeni u nepoznatim situacijama.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="section-h2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/></svg>BARK preporuka</h2>
+      <p>Pre prve šetnje sa novim psom preporučujemo kraći susret sa vlasnikom i psom. To je prilika da pas tebe upozna, da postaviš pitanja vlasniku, i da vlasnik vidi sa kim ostavlja svog ljubimca.</p>
+    </section>
+
+    <section class="card hero">
+      <h2 style="margin-bottom: 16px;">Imaš pitanje ili nedoumicu?</h2>
+      <p class="secondary">Piši nam na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a> - tu smo da pomognemo.</p>
+    </section>
+
+    <div class="footer-links">
+      <a href="/">Početna</a>
+      <a href="/postani-setac.html">Postani šetač</a>
+      <a href="/privacy.html">Politika privatnosti</a>
+      <a href="/uslovi.html">Uslovi korišćenja</a>
+      <a href="/child-safety.html">Bezbednost dece</a>
+      <a href="/delete-account.html">Brisanje naloga</a>
+      <a href="/about.html">O aplikaciji</a>
+    </div>
+
+  </main>
+</body>
+</html>
