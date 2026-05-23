@@ -70,6 +70,7 @@
     <li>Token za push obaveštenja (ukoliko odobrite)</li>
     <li>Podaci o rezervacijama šetnji</li>
     <li>Fotografija lica (selfi) i fotografija lične karte ili pasoša — samo ako se šetač opciono odluči za verifikaciju profila (videti tačku 6)</li>
+    <li>Tehnički podaci o greškama i padovima aplikacije (npr. model uređaja, verzija aplikacije, IP adresa) — radi otkrivanja i ispravljanja problema</li>
   </ul>
 
   <h2>2. Kako koristimo podatke</h2>
@@ -84,7 +85,7 @@
   </ul>
 
   <h2>3. Pravni osnov za obradu podataka</h2>
-  <p>U skladu sa važećim propisima o zaštiti podataka o ličnosti (GDPR i Zakon o zaštiti podataka o ličnosti), svaka obrada podataka zasnovana je na jednom od sledećih pravnih osnova:</p>
+  <p>U skladu sa Zakonom o zaštiti podataka o ličnosti, svaka obrada podataka zasnovana je na jednom od sledećih pravnih osnova:</p>
   <ul class="basis-list">
     <li class="basis-item">
       <span class="basis-label">Podaci o nalogu (ime, email) — neophodni za registraciju i pristup aplikaciji</span>
@@ -114,6 +115,10 @@
       <span class="basis-label">Anonimizovani statistički podaci o korišćenju — u svrhu poboljšanja aplikacije</span>
       <span class="basis-tag tag-interest">Legitimni interes</span>
     </li>
+    <li class="basis-item">
+      <span class="basis-label">Tehnički podaci o greškama i padovima (dijagnostika) — radi stabilnosti i bezbednosti aplikacije</span>
+      <span class="basis-tag tag-interest">Legitimni interes</span>
+    </li>
   </ul>
 
   <h2>4. Treće strane kojima delimo podatke</h2>
@@ -139,6 +144,11 @@
       <p class="partner-desc">Distribucija aplikacije putem App Store i Google Play platformi. Push obaveštenja se isporučuju krajnjem uređaju posredstvom infrastrukture ovih kompanija.</p>
       <a class="partner-link" href="https://www.apple.com/legal/privacy/" target="_blank">apple.com/legal/privacy</a>
     </div>
+    <div class="partner-card">
+      <div class="partner-name">Sentry</div>
+      <p class="partner-desc">Servis za praćenje grešaka i padova aplikacije. Kada dođe do greške ili pada, Sentry prikuplja tehničke podatke (model uređaja, verzija aplikacije, IP adresa i identifikator korisnika) kako bismo otkrili i ispravili problem. Podaci se obrađuju na serverima u EU.</p>
+      <a class="partner-link" href="https://sentry.io/privacy/" target="_blank">sentry.io/privacy</a>
+    </div>
   </div>
 
   <p><strong>Prenos podataka van Srbije:</strong> Pojedini od navedenih pružalaca usluga (npr. Supabase, Expo, Google) čuvaju ili obrađuju podatke na serverima van Republike Srbije. U tim slučajevima oslanjamo se na odgovarajuće mere zaštite (npr. standardne ugovorne klauzule ili jednak nivo zaštite podataka) kako bi vaši podaci ostali bezbedni.</p>
@@ -146,16 +156,16 @@
   <h2>5. Korisnički sadržaj</h2>
   <p>Korisnici mogu postavljati fotografije, pisati opise, poruke i recenzije. Ovaj sadržaj je vidljiv drugim korisnicima aplikacije. Korisnici su odgovorni za sadržaj koji postavljaju. BARK zadržava pravo da ukloni sadržaj koji krši uslove korišćenja.</p>
 
-  <h2>6. Verifikacija profila šetača (opciono)</h2>
+  <h2 id="verifikacija">6. Verifikacija profila šetača (opciono)</h2>
   <p>Šetači mogu opciono da verifikuju svoj profil i dobiju značku "Verifikovan profil" koju vlasnici vide u pretrazi. Verifikacija nije obavezna — aplikacija je u potpunosti upotrebljiva i bez nje.</p>
 
-  <p><strong>Šta prikupljamo:</strong> dve fotografije — sliku tvog lica (selfi) i sliku lične karte ili pasoša. Pre fotografisanja molimo te da prekriješ JMBG (lična karta) ili broj pasoša prstom — taj podatak nam nije potreban za verifikaciju.</p>
+  <p><strong>Šta prikupljamo:</strong> dve fotografije — sliku tvog lica (selfi) i sliku lične karte ili pasoša. Pre fotografisanja molimo te da prekriješ JMBG i/ili broj dokumenta prstom ili papirićem — taj podatak nam nije potreban za verifikaciju.</p>
 
   <p><strong>Zašto:</strong> da bismo ručno uporedili fotografiju tvog lica sa fotografijom na dokumentu i izdali značku verifikacije. Slike se ne koriste ni za jednu drugu svrhu.</p>
 
   <p><strong>Pravna osnova:</strong> tvoj pristanak (član 12. Zakona o zaštiti podataka o ličnosti). Verifikacija je u potpunosti opciona i svoj pristanak možeš povući u svakom trenutku.</p>
 
-  <p><strong>Kako čuvamo:</strong> slike se čuvaju u privatnom, šifrovanom storage prostoru (AES-256). Pristup imaju samo administrator BARK-a. Slike se ne dele sa trećim licima ni sa drugim korisnicima aplikacije, niti se prosleđuju automatskim servisima za prepoznavanje lica ili biometrijsku obradu.</p>
+  <p><strong>Kako čuvamo:</strong> slike se čuvaju u privatnom, šifrovanom prostoru (AES-256) kod našeg pružaoca infrastrukture (Supabase), koji ih čuva isključivo u naše ime i po našim uputstvima, kao obrađivač podataka. Pristup im ima samo BARK administrator. Ne delimo ih, ne prodajemo niti ustupamo trećim licima za njihove svrhe, niti su vidljive drugim korisnicima aplikacije. Slike se ne prosleđuju servisima za automatsko prepoznavanje lica ili biometrijsku obradu.</p>
 
   <p><strong>Period čuvanja:</strong> verifikacione slike se automatski i trajno brišu 7 dana nakon podnošenja zahteva za verifikaciju. Ako pre isteka tog roka obrišeš nalog, slike se brišu odmah, zajedno sa nalogom (videti tačku 7).</p>
 
@@ -167,6 +177,7 @@
 
   <h2>8. Čuvanje podataka</h2>
   <p>Podaci se čuvaju na sigurnim serverima putem platforme Supabase sve dok nalog postoji. Nakon brisanja naloga, podaci se trajno uklanjaju. Anonimizovani statistički podaci mogu se zadržati u svrhu poboljšanja usluge.</p>
+  <p>Određene podatke možemo zadržati i nakon brisanja naloga ako je to neophodno radi ispunjavanja zakonskih obaveza, ostvarivanja ili odbrane pravnih zahteva, ili sprečavanja zloupotrebe — i to samo u neophodnom obimu i na ograničeno vreme, nakon čega se trajno brišu.</p>
 
   <h2>9. Zaštita maloletnika</h2>
   <p>BARK je namenjen isključivo punoletnim osobama, starijim od 18 godina. Aplikaciju ne smeju koristiti maloletnici. Ne prikupljamo namerno podatke o maloletnicima. Ukoliko saznamo da je maloletnik kreirao nalog, odmah ćemo ga ukloniti i obrisati sve povezane podatke. Slučajeve možete prijaviti na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a>.</p>
