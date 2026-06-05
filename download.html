@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preuzmi BARK</title>
+  <meta name="robots" content="noindex">
+  <!--
+    Smart download redirect for barkapp.rs/download
+    - iPhone/iPad -> App Store
+    - Android      -> Google Play
+    - Everything else (desktop, etc.) -> shows both buttons
+    Store URLs (keep in sync with the app listings):
+      App Store: https://apps.apple.com/app/id6762494609
+      Play Store: https://play.google.com/store/apps/details?id=app.bark
+  -->
+  <script>
+    (function () {
+      var APP_STORE = "https://apps.apple.com/app/id6762494609";
+      var PLAY_STORE = "https://play.google.com/store/apps/details?id=app.bark";
+      var ua = navigator.userAgent || navigator.vendor || window.opera || "";
+      var isIOS = (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) ||
+                  (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); // iPadOS
+      var isAndroid = /android/i.test(ua);
+      if (isIOS) { window.location.replace(APP_STORE); }
+      else if (isAndroid) { window.location.replace(PLAY_STORE); }
+    })();
+  </script>
+  <style>
+    html, body { margin: 0; padding: 0; }
+    body {
+      background-color: #F5F8F7;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #222;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card { padding: 40px 24px; max-width: 420px; width: 100%; }
+    h1 { color: #69BE94; font-size: 28px; font-weight: 800; margin: 0 0 8px; letter-spacing: -0.5px; }
+    p { color: #555; font-size: 16px; line-height: 1.5; margin: 0 0 28px; }
+    .btn {
+      display: block;
+      margin: 0 auto 14px;
+      max-width: 280px;
+      background-color: #69BE94;
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 15px 28px;
+      border-radius: 28px;
+    }
+    .btn:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>BARK</h1>
+    <p>Preuzmi aplikaciju i pronađi šetača ili čuvara za svog psa.</p>
+    <a class="btn" href="https://apps.apple.com/app/id6762494609">Preuzmi za iPhone (App Store)</a>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=app.bark">Preuzmi za Android (Google Play)</a>
+  </div>
+</body>
+</html>
