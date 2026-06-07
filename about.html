@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BARK — O aplikaciji</title>
+  <title>BARK - O aplikaciji</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -66,6 +66,18 @@
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=718262304711957&ev=PageView&noscript=1"/></noscript>
   <!-- End Meta Pixel Code -->
+
+  <!-- Google Analytics 4 (gtag.js) - anonymous visitor analytics:
+       page views, country, device, referrer. IP anonymization is on by
+       default in GA4. Disclosed in /privacy.html. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q11HF61KN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9Q11HF61KN');
+  </script>
+  <!-- End Google Analytics -->
 </head>
 <body>
 
@@ -73,7 +85,7 @@
   <p class="tagline">Platforma za šetanje pasa - Srbija</p>
 
   <h2>Šta je BARK?</h2>
-  <p>BARK je mobilna aplikacija koja povezuje vlasnike pasa sa proverenim šetačima u njihovom kraju.</p>
+  <p>BARK povezuje vlasnike pasa sa proverenim šetačima i čuvarima.</p>
 
   <h2>Za vlasnike pasa</h2>
   <ul>

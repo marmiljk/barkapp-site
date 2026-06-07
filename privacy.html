@@ -44,11 +44,23 @@
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=718262304711957&ev=PageView&noscript=1"/></noscript>
   <!-- End Meta Pixel Code -->
+
+  <!-- Google Analytics 4 (gtag.js) - anonymous visitor analytics:
+       page views, country, device, referrer. IP anonymization is on by
+       default in GA4. Disclosed in /privacy.html. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q11HF61KN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9Q11HF61KN');
+  </script>
+  <!-- End Google Analytics -->
 </head>
 <body>
 
   <img src="https://wyrgmmdcyhautiwagnvv.supabase.co/storage/v1/object/public/assets/LOGO%20final%20png%20cropped.png" alt="BARK" style="height:50px;margin-bottom:8px;" />
-  <p class="updated">Politika privatnosti · Poslednje ažuriranje: maj 2026.</p>
+  <p class="updated">Politika privatnosti · Poslednje ažuriranje: jun 2026.</p>
 
   <p>BARK je mobilna aplikacija koja povezuje vlasnike pasa sa šetačima u Beogradu. Ova politika privatnosti objašnjava koje podatke prikupljamo, kako ih koristimo, kako ih štitimo i koja su vaša prava.</p>
 
@@ -64,13 +76,13 @@
     <li>Fotografija profila i naslovna fotografija (opciono)</li>
     <li>Deo grada i grad (za šetače)</li>
     <li>Biografija i cena usluge (za šetače)</li>
-    <li>Informacije o psima — ime, rasa, veličina, napomene (za vlasnike)</li>
+    <li>Informacije o psima - ime, rasa, veličina, napomene (za vlasnike)</li>
     <li>Sadržaj poruka između korisnika</li>
     <li>Recenzije i ocene šetača</li>
     <li>Token za push obaveštenja (ukoliko odobrite)</li>
-    <li>Podaci o rezervacijama šetnji</li>
-    <li>Fotografija lica (selfi) i fotografija lične karte ili pasoša — samo ako se šetač opciono odluči za verifikaciju profila (videti tačku 6)</li>
-    <li>Tehnički podaci o greškama i padovima aplikacije (npr. model uređaja, verzija aplikacije, IP adresa) — radi otkrivanja i ispravljanja problema</li>
+    <li>Podaci o rezervacijama šetnji i čuvanja (datumi, vreme, broj noći, adresa kada je čuvanje aktivno)</li>
+    <li>Fotografija lica (selfi) i fotografija lične karte ili pasoša - samo ako se šetač opciono odluči za verifikaciju profila (videti tačku 6)</li>
+    <li>Tehnički podaci o greškama i padovima aplikacije (npr. model uređaja, verzija aplikacije, IP adresa) - radi otkrivanja i ispravljanja problema</li>
   </ul>
 
   <h2>2. Kako koristimo podatke</h2>
@@ -88,35 +100,35 @@
   <p>U skladu sa Zakonom o zaštiti podataka o ličnosti, svaka obrada podataka zasnovana je na jednom od sledećih pravnih osnova:</p>
   <ul class="basis-list">
     <li class="basis-item">
-      <span class="basis-label">Podaci o nalogu (ime, email) — neophodni za registraciju i pristup aplikaciji</span>
+      <span class="basis-label">Podaci o nalogu (ime, email) - neophodni za registraciju i pristup aplikaciji</span>
       <span class="basis-tag tag-contract">Izvršenje ugovora</span>
     </li>
     <li class="basis-item">
-      <span class="basis-label">Podaci o rezervacijama šetnji — neophodni za realizaciju dogovorene usluge</span>
+      <span class="basis-label">Podaci o rezervacijama šetnji - neophodni za realizaciju dogovorene usluge</span>
       <span class="basis-tag tag-contract">Izvršenje ugovora</span>
     </li>
     <li class="basis-item">
-      <span class="basis-label">Lokacija (deo grada) — neophodna za prikazivanje relevantnih šetača</span>
+      <span class="basis-label">Lokacija (deo grada) - neophodna za prikazivanje relevantnih šetača</span>
       <span class="basis-tag tag-contract">Izvršenje ugovora</span>
     </li>
     <li class="basis-item">
-      <span class="basis-label">Poruke između korisnika — neophodne za komunikaciju u okviru usluge</span>
+      <span class="basis-label">Poruke između korisnika - neophodne za komunikaciju u okviru usluge</span>
       <span class="basis-tag tag-contract">Izvršenje ugovora</span>
     </li>
     <li class="basis-item">
-      <span class="basis-label">Push obaveštenja — šaljemo ih samo uz vašu dozvolu</span>
+      <span class="basis-label">Push obaveštenja - šaljemo ih samo uz vašu dozvolu</span>
       <span class="basis-tag tag-consent">Saglasnost</span>
     </li>
     <li class="basis-item">
-      <span class="basis-label">Verifikacione fotografije (selfi i dokument) — obrađujemo ih samo ako se šetač opciono odluči za verifikaciju</span>
+      <span class="basis-label">Verifikacione fotografije (selfi i dokument) - obrađujemo ih samo ako se šetač opciono odluči za verifikaciju</span>
       <span class="basis-tag tag-consent">Saglasnost</span>
     </li>
     <li class="basis-item">
-      <span class="basis-label">Anonimizovani statistički podaci o korišćenju — u svrhu poboljšanja aplikacije</span>
+      <span class="basis-label">Anonimizovani statistički podaci o korišćenju - u svrhu poboljšanja aplikacije</span>
       <span class="basis-tag tag-interest">Legitimni interes</span>
     </li>
     <li class="basis-item">
-      <span class="basis-label">Tehnički podaci o greškama i padovima (dijagnostika) — radi stabilnosti i bezbednosti aplikacije</span>
+      <span class="basis-label">Tehnički podaci o greškama i padovima (dijagnostika) - radi stabilnosti i bezbednosti aplikacije</span>
       <span class="basis-tag tag-interest">Legitimni interes</span>
     </li>
   </ul>
@@ -149,17 +161,32 @@
       <p class="partner-desc">Servis za praćenje grešaka i padova aplikacije. Kada dođe do greške ili pada, Sentry prikuplja tehničke podatke (model uređaja, verzija aplikacije, IP adresa i identifikator korisnika) kako bismo otkrili i ispravili problem. Podaci se obrađuju na serverima u EU.</p>
       <a class="partner-link" href="https://sentry.io/privacy/" target="_blank">sentry.io/privacy</a>
     </div>
+    <div class="partner-card">
+      <div class="partner-name">Google Analytics</div>
+      <p class="partner-desc">Anonimna analitika posetilaca veb sajta barkapp.rs. Prikupljaju se agregirane statistike o tome koliko ljudi posećuje sajt, iz koje zemlje, sa kog uređaja i kog izvora saobraćaja (referrer). IP adresa se anonimizuje pre slanja Google-u. Podaci se ne koriste za reklamne svrhe i ne povezuju se sa nalogom u aplikaciji.</p>
+      <a class="partner-link" href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
+    </div>
+    <div class="partner-card">
+      <div class="partner-name">Resend</div>
+      <p class="partner-desc">Servis za slanje transakcionih emaila (potvrde, obaveštenja o brisanju naloga, podsetnici). Resend obrađuje tvoju email adresu isključivo radi isporuke poruka koje BARK šalje. Serveri u SAD-u.</p>
+      <a class="partner-link" href="https://resend.com/legal/privacy-policy" target="_blank">resend.com/legal/privacy-policy</a>
+    </div>
   </div>
 
-  <p><strong>Prenos podataka van Srbije:</strong> Pojedini od navedenih pružalaca usluga (npr. Supabase, Expo, Google) čuvaju ili obrađuju podatke na serverima van Republike Srbije. U tim slučajevima oslanjamo se na odgovarajuće mere zaštite (npr. standardne ugovorne klauzule ili jednak nivo zaštite podataka) kako bi vaši podaci ostali bezbedni.</p>
+  <p><strong>Prenos podataka van Srbije i Evropske unije:</strong> Pojedini od navedenih pružalaca usluga obrađuju podatke van Republike Srbije:</p>
+  <ul>
+    <li><strong>Supabase</strong> - serveri u Evropskoj uniji (Frankfurt, Nemačka)</li>
+    <li><strong>Sentry, Resend, Google Analytics, Expo, Firebase</strong> - serveri u SAD-u</li>
+  </ul>
+  <p>Za prenos podataka van EU/EEA oslanjamo se na standardne ugovorne klauzule (Standard Contractual Clauses), tehničke mere zaštite (šifrovanje u prenosu i u mirovanju) i, gde je pravni osnov pristanak, tvoju saglasnost prilikom registracije. IP adrese se anonimizuju gde god je tehnički izvodljivo.</p>
 
   <h2>5. Korisnički sadržaj</h2>
   <p>Korisnici mogu postavljati fotografije, pisati opise, poruke i recenzije. Ovaj sadržaj je vidljiv drugim korisnicima aplikacije. Korisnici su odgovorni za sadržaj koji postavljaju. BARK zadržava pravo da ukloni sadržaj koji krši uslove korišćenja.</p>
 
   <h2 id="verifikacija">6. Verifikacija profila šetača (opciono)</h2>
-  <p>Šetači mogu opciono da verifikuju svoj profil i dobiju značku "Verifikovan profil" koju vlasnici vide u pretrazi. Verifikacija nije obavezna — aplikacija je u potpunosti upotrebljiva i bez nje.</p>
+  <p>Šetači mogu opciono da verifikuju svoj profil i dobiju značku "Verifikovan profil" koju vlasnici vide u pretrazi. Verifikacija nije obavezna - aplikacija je u potpunosti upotrebljiva i bez nje.</p>
 
-  <p><strong>Šta prikupljamo:</strong> dve fotografije — sliku tvog lica (selfi) i sliku lične karte ili pasoša. Pre fotografisanja molimo te da prekriješ JMBG i/ili broj dokumenta prstom ili papirićem — taj podatak nam nije potreban za verifikaciju.</p>
+  <p><strong>Šta prikupljamo:</strong> dve fotografije - sliku tvog lica (selfi) i sliku lične karte ili pasoša. Pre fotografisanja molimo te da prekriješ JMBG i/ili broj dokumenta prstom ili papirićem - taj podatak nam nije potreban za verifikaciju.</p>
 
   <p><strong>Zašto:</strong> da bismo ručno uporedili fotografiju tvog lica sa fotografijom na dokumentu i izdali značku verifikacije. Slike se ne koriste ni za jednu drugu svrhu.</p>
 
@@ -177,7 +204,7 @@
 
   <h2>8. Čuvanje podataka</h2>
   <p>Podaci se čuvaju na sigurnim serverima putem platforme Supabase sve dok nalog postoji. Nakon brisanja naloga, podaci se trajno uklanjaju. Anonimizovani statistički podaci mogu se zadržati u svrhu poboljšanja usluge.</p>
-  <p>Određene podatke možemo zadržati i nakon brisanja naloga ako je to neophodno radi ispunjavanja zakonskih obaveza, ostvarivanja ili odbrane pravnih zahteva, ili sprečavanja zloupotrebe — i to samo u neophodnom obimu i na ograničeno vreme, nakon čega se trajno brišu.</p>
+  <p>Određene podatke možemo zadržati i nakon brisanja naloga ako je to neophodno radi ispunjavanja zakonskih obaveza, ostvarivanja ili odbrane pravnih zahteva, ili sprečavanja zloupotrebe - i to samo u neophodnom obimu i na ograničeno vreme, nakon čega se trajno brišu.</p>
 
   <h2>9. Zaštita maloletnika</h2>
   <p>BARK je namenjen isključivo punoletnim osobama, starijim od 18 godina. Aplikaciju ne smeju koristiti maloletnici. Ne prikupljamo namerno podatke o maloletnicima. Ukoliko saznamo da je maloletnik kreirao nalog, odmah ćemo ga ukloniti i obrisati sve povezane podatke. Slučajeve možete prijaviti na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a>.</p>
@@ -188,11 +215,31 @@
   <h2>11. Izmene politike</h2>
   <p>Zadržavamo pravo da izmenimo ovu politiku privatnosti. O bitnim izmenama obavestićemo korisnike putem emaila ili obaveštenja u aplikaciji.</p>
 
-  <h2>12. Kolačići i Meta Pixel (analitika)</h2>
+  <h2>12. Čuvanje pasa - kod tebe i kod čuvara</h2>
+  <p>Kada koristiš BARK za čuvanje, obrađujemo dodatne podatke neophodne za sigurno i dogovoreno čuvanje psa.</p>
+
+  <p><strong>Šta obrađujemo:</strong></p>
+  <ul>
+    <li>Datum i vreme dolaska i odlaska (check-in i check-out)</li>
+    <li>Adresu tvog doma (kada čuvanje je „Kod tebe") ili adresu čuvara (kada je „Kod čuvara")</li>
+    <li>Podatke o psu: ime, veličinu, rasu, posebne instrukcije, podatke o lekovima i ishrani</li>
+    <li>Poruke i fotografije koje čuvar i vlasnik razmenjuju u chatu tokom trajanja čuvanja</li>
+    <li>Cenu po noći i ukupan broj noći</li>
+  </ul>
+
+  <p><strong>Kada se deli adresa:</strong> Adresa tvog doma (ili adresa čuvara) deli se isključivo nakon što čuvar prihvati zahtev. Pre prihvatanja, druga strana ne može videti adresu. Adresa se prikazuje samo dok je rezervacija aktivna i ne čuva se u zasebnoj bazi - vezana je za samu rezervaciju i briše se zajedno sa njom.</p>
+
+  <p><strong>Osetljiva informacija - tvoja odsutnost:</strong> Kada zakažeš čuvanje, druga strana može pretpostaviti da nisi u svom domu. Ovo je osetljiva informacija. BARK ne deli ovu informaciju van same rezervacije. Ako primetiš sumnjivo ponašanje druge strane ili sumnjaš na zloupotrebu, prijavi nam to odmah na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a>.</p>
+
+  <p><strong>Hitne situacije i veterinar:</strong> U slučaju hitne veterinarske situacije tokom čuvanja, čuvar može deliti osnovne podatke o tvom psu sa veterinarom kako bi pružio neophodnu pomoć. Ova razmena nije pod našom direktnom kontrolom. Pravila o odgovornosti za hitne intervencije nalaze se u <a href="/uslovi.html">Uslovima korišćenja</a>.</p>
+
+  <p><strong>Trajanje čuvanja podataka:</strong> Podaci o čuvanju (datumi, adrese, poruke, fotografije iz chata) čuvaju se dok je rezervacija aktivna i određeni period posle završetka radi razrešavanja sporova i ostavljanja recenzija. Posle isteka, chat se automatski zaključava. Detalji se nalaze u tački 8 ove politike.</p>
+
+  <h2>13. Kolačići i Meta Pixel (analitika)</h2>
   <p>Naš veb-sajt (barkapp.rs) koristi Meta Pixel, alat kompanije Meta (Facebook), radi merenja posećenosti sajta i efikasnosti oglasa. Meta Pixel može postaviti kolačiće i prikupiti podatke kao što su IP adresa i interakcije sa stranicom. Ovi podaci nam pomažu da razumemo koliko ljudi poseti sajt i kako do njega stižu.</p>
   <p>Mobilna aplikacija BARK <strong>ne koristi</strong> Meta Pixel. Kolačićima možeš upravljati u podešavanjima svog pregledača, a više o Meta praksama možeš pročitati na <a href="https://www.facebook.com/privacy/policy/" target="_blank">facebook.com/privacy/policy</a>.</p>
 
-  <h2>13. Kontakt</h2>
+  <h2>14. Kontakt</h2>
   <p>Za sva pitanja u vezi sa privatnošću pišite nam na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a>.</p>
 
 </body>
