@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Čuvanje pasa u Beogradu - BARK aplikacija</title>
+  <meta name="description" content="Pronađi proverenog čuvara pasa u Beogradu preko BARK aplikacije. Čuvanje kod vlasnika ili boravak kod čuvara - cene na profilu, bez provizije." />
+  <link rel="canonical" href="https://barkapp.rs/cuvanje-pasa-beograd.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Čuvanje pasa u Beogradu - BARK aplikacija" />
+  <meta property="og:description" content="Pronađi proverenog čuvara pasa u Beogradu. Čuvanje kod vlasnika ili boravak kod čuvara - cene na profilu, bez provizije." />
+  <meta property="og:url" content="https://barkapp.rs/cuvanje-pasa-beograd.html" />
+  <meta property="og:image" content="https://wyrgmmdcyhautiwagnvv.supabase.co/storage/v1/object/public/assets/LOGO%20final%20png%20cropped.png" />
+  <meta property="og:locale" content="sr_RS" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #69BE94;
+      min-height: 100vh;
+      padding: 40px 16px;
+      color: #222;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 36px 32px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+    }
+    .hero { text-align: center; padding: 48px 32px; }
+    .logo { height: 60px; margin-bottom: 24px; }
+    .hero h1 { font-size: 28px; margin-bottom: 12px; color: #222; }
+    .hero .lead {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+    .cta-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .app-badge {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 24px;
+      border-radius: 999px;
+      transition: background 0.2s;
+    }
+    .app-badge.active { background: #111; color: #fff; }
+    .app-badge.active:hover { background: #333; }
+    .secondary { font-size: 14px; color: #888; }
+    .secondary a { color: #69BE94; text-decoration: none; font-weight: 600; }
+    .secondary a:hover { text-decoration: underline; }
+    h2 { font-size: 22px; margin-bottom: 16px; color: #222; }
+    h3 { font-size: 16px; margin-top: 18px; margin-bottom: 6px; color: #222; }
+    p { margin-bottom: 12px; color: #444; font-size: 15px; }
+    ol, ul { padding-left: 0; list-style: none; }
+    ol li, ul li { margin-bottom: 14px; color: #444; font-size: 15px; }
+    .steps li strong { display: block; margin-bottom: 4px; color: #222; }
+    .cuvanje-option { display: flex; gap: 20px; align-items: center; margin-top: 20px; }
+    .cuvanje-option:first-of-type { margin-top: 4px; }
+    .cuvanje-option img { width: 110px; height: auto; flex-shrink: 0; }
+    .cuvanje-option h3 { margin-top: 0; }
+    .cuvanje-option p { margin-bottom: 0; }
+    @media (max-width: 480px) {
+      .cuvanje-option { gap: 14px; }
+      .cuvanje-option img { width: 84px; }
+    }
+    .pill-list li { display: flex; gap: 12px; align-items: flex-start; }
+    .pill-list li svg { width: 22px; height: 22px; color: #2E7A6B; flex-shrink: 0; margin-top: 1px; }
+    .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #69BE94;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      vertical-align: middle;
+      margin-left: 4px;
+    }
+    .faq-item { padding: 0; border-bottom: 1px solid #eee; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item summary {
+      cursor: pointer;
+      list-style: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: #222;
+      padding: 16px 32px 16px 0;
+      position: relative;
+      user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '▾';
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #69BE94;
+      font-size: 16px;
+      transition: transform 0.2s ease;
+    }
+    .faq-item[open] summary::after { transform: translateY(-50%) rotate(180deg); }
+    .faq-item > p { padding: 0 0 16px 0; margin-bottom: 0; }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px 0 0 0;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: #ffffff;
+      opacity: 0.7;
+      text-decoration: none;
+    }
+    .footer-links a:hover { opacity: 1; }
+    @media (max-width: 480px) {
+      .card { padding: 28px 22px; }
+      .hero { padding: 36px 22px; }
+      .hero h1 { font-size: 24px; }
+      .hero .lead { font-size: 16px; }
+      h2 { font-size: 20px; }
+    }
+  </style>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '718262304711957');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=718262304711957&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- Google Analytics 4 (gtag.js) - anonymous visitor analytics:
+       page views, country, device, referrer. IP anonymization is on by
+       default in GA4. Disclosed in /privacy.html. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q11HF61KN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9Q11HF61KN');
+  </script>
+  <!-- End Google Analytics -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Koliko košta čuvanje pasa u Beogradu?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Cenu određuje svaki čuvar i prikazana je po noći na njegovom profilu, pre slanja zahteva. BARK ne naplaćuje proviziju - dogovor i plaćanje su direktno između tebe i čuvara." }
+      },
+      {
+        "@type": "Question",
+        "name": "Koja je razlika između čuvanja kod vlasnika i kod čuvara?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Kod čuvanja kod vlasnika, čuvar dolazi kod tebe - pas ostaje u svom domu i svojoj rutini. Kod boravka kod čuvara, tvoj pas boravi u domu čuvara dok si odsutan. Obe opcije biraš u aplikaciji, a detalje dogovaraš direktno sa čuvarom." }
+      },
+      {
+        "@type": "Question",
+        "name": "Da li su čuvari provereni?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Čuvari mogu da verifikuju identitet ličnim dokumentom i tada dobijaju oznaku verifikovanog profila. Pored toga, posle svake usluge vlasnici ostavljaju recenzije koje su vidljive svima." }
+      },
+      {
+        "@type": "Question",
+        "name": "Kako da rezervišem čuvanje psa?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Preuzmeš BARK aplikaciju, izabereš vrstu čuvanja i datume, pregledaš profile dostupnih čuvara sa cenama i recenzijama, i pošalješ zahtev čuvaru koji ti odgovara. Kada čuvar prihvati, detalje dogovarate u poruci unutar aplikacije." }
+      },
+      {
+        "@type": "Question",
+        "name": "Da li mogu da upoznam čuvara pre čuvanja?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Da. Nakon što čuvar prihvati zahtev, otvara se poruka u aplikaciji gde možete da se dogovorite o upoznavanju pre početka čuvanja." }
+      },
+      {
+        "@type": "Question",
+        "name": "U kojim gradovima radi BARK?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Trenutno BARK radi samo u Beogradu. Planiramo proširenje na ostale gradove." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <main class="container">
+
+    <section class="card hero">
+      <img src="https://wyrgmmdcyhautiwagnvv.supabase.co/storage/v1/object/public/assets/LOGO%20final%20png%20cropped.png" alt="BARK" class="logo" />
+      <h1>Čuvanje pasa u Beogradu</h1>
+      <p class="lead">Pronađi proverenog čuvara u svom delu grada - tvoj pas je u sigurnim rukama dok si na putu.</p>
+      <div class="cta-row">
+        <a href="https://apps.apple.com/app/id6762494609" class="app-badge active" onclick="fbq('track', 'AppStoreClick')">Preuzmi sa App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=app.bark" class="app-badge active" onclick="fbq('track', 'PlayStoreClick')">Preuzmi sa Google Play</a>
+      </div>
+      <p class="secondary">Već imaš aplikaciju? <a href="bark://">Otvori aplikaciju</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Dve vrste čuvanja - ti biraš</h2>
+      <div class="cuvanje-option">
+        <img src="dog-sitting.png" alt="Čuvanje pasa kod vlasnika - čuvar sa psom" />
+        <div>
+          <h3>Čuvanje kod vlasnika</h3>
+          <p>Čuvar dolazi kod tebe - pas ostaje u svom domu, u svojoj rutini. Idealno za pse koji se teže navikavaju na novu sredinu. Detalje (obilasci ili duži boravak, hranjenje, šetnje) dogovaraš direktno sa čuvarom.</p>
+        </div>
+      </div>
+      <div class="cuvanje-option">
+        <img src="dog-boarding.png" alt="Boravak psa kod čuvara - pas u domu čuvara" />
+        <div>
+          <h3>Boravak kod čuvara</h3>
+          <p>Tvoj pas boravi u domu čuvara dok si odsutan - na primer tokom putovanja ili odmora. Na profilu čuvara vidiš sve bitne informacije: cenu po noći, koliko pasa prima i koje veličine.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Kako funkcioniše</h2>
+      <ol class="steps">
+        <li>
+          <strong>1. Preuzmi BARK i izaberi vrstu čuvanja.</strong>
+          Čuvanje kod vlasnika ili boravak kod čuvara - plus datumi koji ti trebaju.
+        </li>
+        <li>
+          <strong>2. Pregledaj profile čuvara.</strong>
+          Vidiš cenu po noći, deo grada, opis, recenzije i da li je profil verifikovan - sve pre slanja zahteva.
+        </li>
+        <li>
+          <strong>3. Pošalji zahtev čuvaru koji ti odgovara.</strong>
+          Čuvar vidi detalje o tvom psu i prihvata ako mu termin odgovara.
+        </li>
+        <li>
+          <strong>4. Dogovorite detalje u poruci.</strong>
+          Kada čuvar prihvati, otvara se poruka u aplikaciji - tu se dogovarate o svemu, uključujući i upoznavanje pre čuvanja.
+        </li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Zašto BARK</h2>
+      <ul class="pill-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span><strong>Verifikovani čuvari</strong> <span class="verified-badge">✓ Verifikovan</span> - identitet potvrđen ličnim dokumentom.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span><strong>Recenzije posle svake usluge</strong> - vidiš iskustva drugih vlasnika.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+          <span><strong>Cene unapred poznate</strong> - po noći, jasno na profilu. BARK ne naplaćuje proviziju.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+          <span><strong>Poruke u aplikaciji</strong> - dogovor i fotografije tvog psa tokom čuvanja, sve na jednom mestu.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Često postavljana pitanja</h2>
+
+      <details class="faq-item">
+        <summary>Koliko košta čuvanje pasa u Beogradu?</summary>
+        <p>Cenu određuje svaki čuvar i prikazana je po noći na njegovom profilu, pre slanja zahteva. BARK ne naplaćuje proviziju - dogovor i plaćanje su direktno između tebe i čuvara.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Koja je razlika između čuvanja kod vlasnika i kod čuvara?</summary>
+        <p>Kod čuvanja kod vlasnika, čuvar dolazi kod tebe - pas ostaje u svom domu i svojoj rutini. Kod boravka kod čuvara, tvoj pas boravi u domu čuvara dok si odsutan. Obe opcije biraš u aplikaciji, a detalje dogovaraš direktno sa čuvarom.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Da li su čuvari provereni?</summary>
+        <p>Čuvari mogu da verifikuju identitet ličnim dokumentom i tada dobijaju oznaku verifikovanog profila. Pored toga, posle svake usluge vlasnici ostavljaju recenzije koje su vidljive svima.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Kako da rezervišem čuvanje psa?</summary>
+        <p>Preuzmeš BARK aplikaciju, izabereš vrstu čuvanja i datume, pregledaš profile dostupnih čuvara sa cenama i recenzijama, i pošalješ zahtev čuvaru koji ti odgovara. Kada čuvar prihvati, detalje dogovarate u poruci unutar aplikacije.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Da li mogu da upoznam čuvara pre čuvanja?</summary>
+        <p>Da. Nakon što čuvar prihvati zahtev, otvara se poruka u aplikaciji gde možete da se dogovorite o upoznavanju pre početka čuvanja.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>U kojim gradovima radi BARK?</summary>
+        <p>Trenutno BARK radi samo u <strong>Beogradu</strong>. Planiramo proširenje na ostale gradove.</p>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Treba ti i šetač?</h2>
+      <p>BARK nije samo čuvanje - pronađi i proverenog šetača u svom delu grada.</p>
+      <p style="margin-bottom: 0;"><a href="/setanje-pasa-beograd.html" style="color: #69BE94; font-weight: 600; text-decoration: none;">Šetanje pasa u Beogradu →</a></p>
+    </section>
+
+    <section class="card hero">
+      <div class="cta-row">
+        <a href="https://apps.apple.com/app/id6762494609" class="app-badge active" onclick="fbq('track', 'AppStoreClick')">Preuzmi sa App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=app.bark" class="app-badge active" onclick="fbq('track', 'PlayStoreClick')">Preuzmi sa Google Play</a>
+      </div>
+      <p class="secondary">Imaš pitanje? Piši nam na <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a></p>
+    </section>
+
+    <div class="footer-links">
+      <a href="/">Početna</a>
+      <a href="/setanje-pasa-beograd.html">Šetanje pasa</a>
+      <a href="/postani-setac.html">Postani šetač</a>
+      <a href="/privacy.html">Politika privatnosti</a>
+      <a href="/uslovi.html">Uslovi korišćenja</a>
+      <a href="/about.html">O aplikaciji</a>
+    </div>
+
+  </main>
+</body>
+</html>
