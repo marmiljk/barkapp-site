@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dog Walking &amp; Pet Sitting in Belgrade - BARK App</title>
+  <meta name="description" content="Find a trusted dog walker or pet sitter in Belgrade with the BARK app. Verified profiles, reviews, upfront prices - no commission. Dog boarding and house sitting too." />
+  <link rel="canonical" href="https://barkapp.rs/dog-walking-belgrade.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dog Walking &amp; Pet Sitting in Belgrade - BARK App" />
+  <meta property="og:description" content="Find a trusted dog walker or pet sitter in Belgrade. Verified profiles, reviews, upfront prices - no commission." />
+  <meta property="og:url" content="https://barkapp.rs/dog-walking-belgrade.html" />
+  <meta property="og:image" content="https://wyrgmmdcyhautiwagnvv.supabase.co/storage/v1/object/public/assets/LOGO%20final%20png%20cropped.png" />
+  <meta property="og:locale" content="en_US" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #69BE94;
+      min-height: 100vh;
+      padding: 40px 16px;
+      color: #222;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 36px 32px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+    }
+    .hero { text-align: center; padding: 48px 32px; }
+    .logo { height: 60px; margin-bottom: 24px; }
+    .hero h1 { font-size: 28px; margin-bottom: 12px; color: #222; }
+    .hero .lead {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+    .cta-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .app-badge {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 24px;
+      border-radius: 999px;
+      transition: background 0.2s;
+    }
+    .app-badge.active { background: #111; color: #fff; }
+    .app-badge.active:hover { background: #333; }
+    .secondary { font-size: 14px; color: #888; }
+    .secondary a { color: #69BE94; text-decoration: none; font-weight: 600; }
+    .secondary a:hover { text-decoration: underline; }
+    h2 { font-size: 22px; margin-bottom: 16px; color: #222; }
+    h3 { font-size: 16px; margin-top: 18px; margin-bottom: 6px; color: #222; }
+    p { margin-bottom: 12px; color: #444; font-size: 15px; }
+    ol, ul { padding-left: 0; list-style: none; }
+    ol li, ul li { margin-bottom: 14px; color: #444; font-size: 15px; }
+    .steps li strong { display: block; margin-bottom: 4px; color: #222; }
+    .pill-list li { display: flex; gap: 12px; align-items: flex-start; }
+    .pill-list li svg { width: 22px; height: 22px; color: #2E7A6B; flex-shrink: 0; margin-top: 1px; }
+    .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #69BE94;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      vertical-align: middle;
+      margin-left: 4px;
+    }
+    .service-option { display: flex; gap: 20px; align-items: center; margin-top: 20px; }
+    .service-option:first-of-type { margin-top: 4px; }
+    .service-option img { width: 110px; height: auto; flex-shrink: 0; }
+    .service-option h3 { margin-top: 0; }
+    .service-option p { margin-bottom: 0; }
+    .faq-item { padding: 0; border-bottom: 1px solid #eee; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item summary {
+      cursor: pointer;
+      list-style: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: #222;
+      padding: 16px 32px 16px 0;
+      position: relative;
+      user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '▾';
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #69BE94;
+      font-size: 16px;
+      transition: transform 0.2s ease;
+    }
+    .faq-item[open] summary::after { transform: translateY(-50%) rotate(180deg); }
+    .faq-item > p { padding: 0 0 16px 0; margin-bottom: 0; }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px 0 0 0;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: #ffffff;
+      opacity: 0.7;
+      text-decoration: none;
+    }
+    .footer-links a:hover { opacity: 1; }
+    @media (max-width: 480px) {
+      .card { padding: 28px 22px; }
+      .hero { padding: 36px 22px; }
+      .hero h1 { font-size: 24px; }
+      .hero .lead { font-size: 16px; }
+      h2 { font-size: 20px; }
+      .service-option { gap: 14px; }
+      .service-option img { width: 84px; }
+    }
+  </style>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '718262304711957');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=718262304711957&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- Google Analytics 4 (gtag.js) - anonymous visitor analytics:
+       page views, country, device, referrer. IP anonymization is on by
+       default in GA4. Disclosed in /privacy.html. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q11HF61KN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9Q11HF61KN');
+  </script>
+  <!-- End Google Analytics -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does dog walking cost in Belgrade?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Each walker sets their own price, shown on their profile before you send a request. BARK takes no commission - you arrange payment directly with the walker." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are the dog walkers and sitters vetted?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Walkers and sitters can verify their identity with an ID document, which earns a verified badge on their profile. Owners also leave reviews after every walk or sitting, visible to everyone." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the BARK app available in English?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The app is currently in Serbian. The booking flow is simple and visual - pick a service, a date, and a walker - and many walkers and sitters in Belgrade speak English, so communication is usually easy." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between dog boarding and house sitting?",
+        "acceptedAnswer": { "@type": "Answer", "text": "With boarding, your dog stays at the sitter's home while you are away. With house sitting, the sitter comes to your home so your dog stays in its own routine. Both options are available in the app, priced per night." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which areas of Belgrade does BARK cover?",
+        "acceptedAnswer": { "@type": "Answer", "text": "BARK works across Belgrade - you choose your neighborhood in the app and see walkers and sitters who work in your area." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I book a dog walker in Belgrade?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Download the BARK app, pick a service and date, browse profiles with prices and reviews, and send a request to the walker you like. Once they accept, you chat in the app to arrange the details." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <main class="container">
+
+    <section class="card hero">
+      <img src="https://wyrgmmdcyhautiwagnvv.supabase.co/storage/v1/object/public/assets/LOGO%20final%20png%20cropped.png" alt="BARK" class="logo" />
+      <h1>Dog Walking &amp; Pet Sitting in Belgrade</h1>
+      <p class="lead">Find a trusted dog walker or sitter in your neighborhood - verified profiles, reviews, and upfront prices.</p>
+      <div class="cta-row">
+        <a href="https://apps.apple.com/app/id6762494609" class="app-badge active" onclick="fbq('track', 'AppStoreClick')">Download on the App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=app.bark" class="app-badge active" onclick="fbq('track', 'PlayStoreClick')">Get it on Google Play</a>
+      </div>
+      <p class="secondary">Already have the app? <a href="bark://">Open BARK</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Three services, one app</h2>
+      <div class="service-option">
+        <img src="dog-walking.png" alt="Dog walker with a dog in Belgrade" />
+        <div>
+          <h3>Dog walking</h3>
+          <p>A local walker picks your dog up and takes it for a walk - on your schedule. The walker marks the start and end of the walk in the app and can send you photos along the way.</p>
+        </div>
+      </div>
+      <div class="service-option">
+        <img src="dog-boarding.png" alt="Dog boarding at a sitter's home in Belgrade" />
+        <div>
+          <h3>Dog boarding</h3>
+          <p>Your dog stays at the sitter's home while you travel. Each sitter's profile shows the price per night, how many dogs they take, and which sizes.</p>
+        </div>
+      </div>
+      <div class="service-option">
+        <img src="dog-sitting.png" alt="House sitting - sitter visits your home" />
+        <div>
+          <h3>House sitting</h3>
+          <p>The sitter comes to your home, so your dog keeps its own routine - feeding, walks, and company while you are away. Details are arranged directly with the sitter.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li>
+          <strong>1. Download BARK and pick a service.</strong>
+          Walking, boarding, or house sitting - plus the dates you need.
+        </li>
+        <li>
+          <strong>2. Browse profiles in your neighborhood.</strong>
+          Prices, bios, reviews from other owners, and a verified badge - all visible before you send a request.
+        </li>
+        <li>
+          <strong>3. Send a request to the person you like.</strong>
+          They see your dog's details and accept if the time works for them.
+        </li>
+        <li>
+          <strong>4. Chat in the app.</strong>
+          Once accepted, you arrange everything in the in-app chat - including a meet and greet before the first booking.
+        </li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Why BARK</h2>
+      <ul class="pill-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span><strong>Verified walkers and sitters</strong> <span class="verified-badge">✓ Verified</span> - identity confirmed with an ID document.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span><strong>Reviews after every booking</strong> - see other owners' experiences before you choose.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+          <span><strong>Upfront prices, no commission</strong> - you pay the walker or sitter directly, BARK adds nothing on top.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+          <span><strong>In-app chat with photos</strong> - arrangements and photo updates of your dog, all in one place.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Frequently asked questions</h2>
+
+      <details class="faq-item">
+        <summary>How much does dog walking cost in Belgrade?</summary>
+        <p>Each walker sets their own price, shown on their profile before you send a request. BARK takes no commission - you arrange payment directly with the walker.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Are the dog walkers and sitters vetted?</summary>
+        <p>Walkers and sitters can verify their identity with an ID document, which earns a verified badge on their profile. Owners also leave reviews after every walk or sitting, visible to everyone.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is the BARK app available in English?</summary>
+        <p>The app is currently in Serbian. The booking flow is simple and visual - pick a service, a date, and a walker - and many walkers and sitters in Belgrade speak English, so communication is usually easy.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is the difference between dog boarding and house sitting?</summary>
+        <p>With boarding, your dog stays at the sitter's home while you are away. With house sitting, the sitter comes to your home so your dog stays in its own routine. Both options are available in the app, priced per night.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Which areas of Belgrade does BARK cover?</summary>
+        <p>BARK works across Belgrade - you choose your neighborhood in the app and see walkers and sitters who work in your area.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How do I book a dog walker in Belgrade?</summary>
+        <p>Download the BARK app, pick a service and date, browse profiles with prices and reviews, and send a request to the walker you like. Once they accept, you chat in the app to arrange the details.</p>
+      </details>
+    </section>
+
+    <section class="card hero">
+      <div class="cta-row">
+        <a href="https://apps.apple.com/app/id6762494609" class="app-badge active" onclick="fbq('track', 'AppStoreClick')">Download on the App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=app.bark" class="app-badge active" onclick="fbq('track', 'PlayStoreClick')">Get it on Google Play</a>
+      </div>
+      <p class="secondary">Questions? Write to us at <a href="mailto:podrska@barkapp.rs">podrska@barkapp.rs</a></p>
+    </section>
+
+    <div class="footer-links">
+      <a href="/">Početna (Srpski)</a>
+      <a href="/setanje-pasa-beograd.html">Šetanje pasa</a>
+      <a href="/cuvanje-pasa-beograd.html">Čuvanje pasa</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/uslovi.html">Terms of Use</a>
+    </div>
+
+  </main>
+</body>
+</html>
